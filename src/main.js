@@ -8,6 +8,7 @@ import App from './App'
 import store from './store'
 import Editor from './components/Editor'
 import Login from './components/Login.vue'
+import notFound from './components/404.vue'
 import Profile from './components/Profile/Index.vue'
 import { sync } from 'vuex-router-sync'
 import VModal from 'vue-js-modal'
@@ -25,7 +26,8 @@ const router = new Router({
     { name: 'saved', path: '/s/:id', component: Editor },
     { name: 'join', path: '/j/:ref', component: Editor, props: true },
     { name: 'login', path: '/callback', component: Login },
-    { name: 'profile', path: '/profile', component: Profile }
+    { name: 'profile', path: '/profile', component: Profile },
+    { name: 'notFound', path: '*', component: notFound }
   ]
 })
 
